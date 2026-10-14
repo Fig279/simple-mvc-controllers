@@ -7,3 +7,21 @@ const router = require('./router.js');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
+
+const app = express();
+
+app.use(compression());
+//app.use('/assets', path.resolve(`${__dirname}/../client/`));
+app.use('/assets', express.static(path.resolve(`${__dirname}/../client/`)));
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.use(favicon(`${__dirname}/../client/img/favicon.png`));
+
+router(app);
+
+app.listen(port, (err) => {
+    if (err) { throw err; }
+    console.log(`Listening on 127.0.0.1:${port}`);
+})

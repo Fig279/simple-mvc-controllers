@@ -2,6 +2,17 @@
   "name": "simple-mvc-no-templates",
   "version": "0.0.0",
   "description": "A simple Express MVC using only static files",
+  "homepage": "https://github.com/Fig279/simple-mvc-controllers#readme",
+  "bugs": {
+    "url": "https://github.com/Fig279/simple-mvc-controllers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fig279/simple-mvc-controllers.git"
+  },
+  "license": "ISC",
+  "author": "Cody Van De Mark / Austin Willoughby",
+  "type": "commonjs",
   "main": "./src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
@@ -9,17 +20,16 @@
     "test": "echo \"tests complete\"",
     "nodemon": "nodemon --watch ./src ./src/app.js"
   },
-  "author": "Cody Van De Mark / Austin Willoughby",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.0",
-    "globals": "^17.3.0",
-    "nodemon": "^3.1.10"
-  },
   "dependencies": {
     "compression": "^1.8.1",
     "express": "^5.2.1",
     "serve-favicon": "^2.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "global": "^4.4.0",
+    "globals": "^17.3.0",
+    "nodemon": "^3.1.10"
   }
 }
